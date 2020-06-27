@@ -1,0 +1,4 @@
+/* components/moreActivity/index.wxss */
+.op-wrap{
+	height: 500rpx;
+}

@@ -1,0 +1,28 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1593245629944'); /* IE9 */
+  src: url('iconfont.eot?t=1593245629944#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPUAAsAAAAAB/QAAAOFAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDHAqDMIMLATYCJAMQCwoABCAFhG0HRhv7Bsi+QDzEFOwnEiJU6xl73t6yle6p8kn+uhgJWYNBPHyN/e/c3f0imlyqePxJDPPphCoWmY6HQqQREg2yl/CO/MufQN5IpzKwH3bvvJe9fTE+3BqV0LoLqg9XalNdh+jU39OT7dOoXRaaJKhM0ITcdIhSUz2dnCd2xkzj1paEVFa7lOjmIE2wp+mLMeCCGQeChfaAuxYjyj6ilv//3umf4q1r33J5r7U3dj51AowDCmhvjCIrkBLkHuAZJum8T6DesDwuO9rUBd4KZ1kgHqVeAO+SXelpDbVCdcveIl5Dldr0xPU98Cr+fPynC2+SqsxZe3inWoayX9HqtuQ8FyEBivW8kA6RMQMU4l6r/wa3ND/DTb3xG3drQK1aiV/RQ52Pyrvoa92/PJKQiWpOcyNYIV1+YQqfI/ErmyP4s2zwIemyuBZNeAx8I7azs1pWojHqXE9jY593YzSd89LdJ4ef3Y+rDz0XfJdeHH61nLJnJ+v39nq433u73btDQmziGsK4Yu8jkzO7/G1GFMf33tfufBOue796+FvP/uzeHzNdqvGePjmbEYf1SeZZ/yWLrOrO6a7ycPnZHkZbyke5xEdG0O6SeKaqeRw4qeuVq24zNBuiVC5rZmWElT3IZWSnRwINRIymUR5/57toyeLPM4fgKULp2NbXvh1e5fH6GxfBXVv/ufLM4eZnqJge4LEPiHCgzjsCVh8+dz84ADXPGWMXd/x2QF6tqgEPRRUBLgc+WscaiAEY4yzM1/AAVJZ3u3/yOx59yWdGg4qulQJ+JPQijlYSGGfwdyhGK/43xcieYqocRym62pdbiWLRH7MqoV49KhBu92kNY9foLKG2pJAgqTEEWa0RsrAzUKXBClSrtQ71ptUebtCBcROlDlPWAUKr+5A0+wpZqw9kYT9ClW5/oFpruEG9owg7s8FYGLmysMCxjMRpZJSojXgu7pu0dmC9YhFYURULejBzGFNIq9JUS7XYhtkaGxwTeh3nBBFGragGHsMWC0V2Rk1Y4ioD5/YCtZq0vUglUSv42sZgAg6TIaJpiJGEsiHhYM639v4OmJ7CQsB6eA3pHhjjYBwd0VLRjCBr9bZRvGd5xmGCng7HEQjBUFZIDXgxi5unEHv7LBNMwqkYZmTtCqipHxmrV+1vtH7DQ1DPubhEihwlqtTcDZteVqif0piNvsApVmpzHx/BBgAAAAA=') format('woff2'),
+  url('iconfont.woff?t=1593245629944') format('woff'),
+  url('iconfont.ttf?t=1593245629944') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1593245629944#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-more:before {
+  content: "\e629";
+}
+
+.icon-user:before {
+  content: "\e618";
+}
+
+.icon-location:before {
+  content: "\e881";
+}

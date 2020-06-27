@@ -1,14 +1,26 @@
 {
-  "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
-  ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+	"pages": [
+		"pages/index/index",
+		"pages/logs/logs",
+		"pages/profile/index"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTitleText": "WeChat",
+		"navigationBarTextStyle": "black"
   },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "usingComponents":{
+    "icon": "/miniprogram_npm/weui-miniprogram/icon/icon"
+  },
+	"permission": {
+		"scope.userLocation": {
+			"desc": "你的位置信息将仅仅用于小程序展示"
+		}
+	},
+	"useExtendedLib": {
+		"weui": true
+	},
+	"style": "v2",
+	"sitemapLocation": "sitemap.json"
 }

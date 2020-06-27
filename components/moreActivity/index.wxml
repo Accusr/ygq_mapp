@@ -1,0 +1,3 @@
+<popup show="{{visible}}" bindclose="closePop">
+	<view class="op-wrap">这是标题</view>
+</popup>

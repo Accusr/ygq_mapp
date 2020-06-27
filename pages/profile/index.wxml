@@ -1,0 +1,42 @@
+<navigator url="/pages/index/index" open-type="reLaunch" class="navBack">
+	<icon icon="back" color="black" size="{{12}}"></icon>
+</navigator>
+<view class="banner-wrap">
+	<view class="avatar">
+		<open-data  type="userAvatarUrl"></open-data>
+	</view>
+	<view class="main-info">
+		<text>关注 1</text>
+		<text>活动 10</text>
+	</view>
+
+	<view class="detail">
+		<view class="item">
+			<view>0</view>
+			<view>被关注</view>
+		</view>
+		<view class="item">
+			<view>0</view>
+			<view>被关注</view>
+		</view>
+		<view class="item">
+			<view>0</view>
+			<view>被关注</view>
+		</view>
+		<view class="item">
+			<view>0</view>
+			<view>被关注</view>
+		</view>
+	</view>
+</view>
+
+<view class="fall-wrap" wx:for="{{10}}">
+	<view>
+		<view>2019年</view>
+		<view>12月</view>
+		<view>这是一段文字...</view>
+	</view>
+	<scroll-view class="img-wrap" scroll-x>
+		<image class="img" wx:for="{{9}}"/>
+	</scroll-view>
+</view>

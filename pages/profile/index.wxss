@@ -1,0 +1,67 @@
+/* pages/profile/index.wxss */
+.navBack{
+	position: fixed;
+	width: 58rpx;
+	height: 58rpx;
+	top: 90rpx;
+	left: 20rpx;
+	line-height: 58rpx;
+	text-align: center;
+	border-radius: 50%;
+	background-color: white;
+	z-index: 99;
+}
+.banner-wrap{
+	height: 40vh;
+	width: 100%;
+	background: silver;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 10vh;
+	position: relative;
+}
+.avatar{
+	width: 150rpx;
+	height: 150rpx;
+	border-radius: 8rpx;
+	overflow: hidden;
+}
+.banner-wrap .main-info{
+	color: whitesmoke;
+	margin-top: 10%;
+}
+.banner-wrap .detail{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	justify-content: space-around;
+	background: rgba(0, 0, 0, 0.6);
+	padding: 10rpx 0;
+}
+.banner-wrap .detail .item{
+	text-align: center;
+	color: whitesmoke;
+
+}
+
+/* // */
+.fall-wrap .img-wrap{
+	width: 100%;
+	height: 200rpx;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.fall-wrap .img-wrap .img{
+	width: 200rpx;
+	height: 200rpx;
+	background: white;
+	display: inline-block;
+	margin-left: 10rpx;
+	border-radius: 8rpx;
+	overflow: hidden;
+}
+.fall-wrap .img-wrap .img:last-child{
+	margin-right: 10rpx;
+}

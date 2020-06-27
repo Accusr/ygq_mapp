@@ -1,0 +1,8 @@
+{
+	"component": true,
+	"usingComponents": {
+    "icon": "/miniprogram_npm/weui-miniprogram/icon/icon",
+    "tip":"/miniprogram_npm/weui-miniprogram/toptips/toptips",
+    "popup":"/components/popup"
+  }
+}

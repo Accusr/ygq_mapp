@@ -1,0 +1,6 @@
+<view catchtouchmove="true" class="{{show?'popup-show':'popup-hidden'}}">
+	<view class="popup-mask" wx:if="{{show}}" catchtap="close" ></view>
+	<view class="popup-wrap" >
+		<slot></slot>
+	</view>
+</view>

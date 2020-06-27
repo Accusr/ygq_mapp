@@ -1,0 +1,27 @@
+/* components/poptip/index.wxss */
+.poptip{
+	position: fixed;
+-webkit-transform: translateZ(0) translateY(calc(-100% - 200rpx));
+transform: translateZ(0) translateY(calc(-100% - 200rpx));
+text-align: center;
+left: 32rpx;
+right: 32rpx;
+border-radius: 8rpx;
+padding: 16rpx;
+-webkit-border-radius: 8rpx;
+color: rgba(255,255,255,0.9);
+font-size: 34rpx;
+line-height: 1.4;
+background: rgba(250,81,81,0.9);
+z-index: 5000;
+word-wrap: break-word;
+word-break: break-all;
+-webkit-transition: all .4s ease-in-out;
+transition: all .4s ease-in-out;
+}
+
+.poptip-show {
+	-webkit-transform: translateZ(0) translateY(0);
+	transform: translateZ(0) translateY(0);
+	opacity: 1;
+}

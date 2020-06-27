@@ -1,54 +1,82 @@
-//index.js
-//获取应用实例
 const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+   mapOption:{
+     longitude:120.56432,
+     latitude:30.56432
+   },
+   markers:[{
+     id:1,
+     latitude: 30.63170,
+     longitude: 120.56432,
+     iconPath:'../../static/img/test_avatar.jpeg',
+     width: '80rpx',
+     height: '80rpx',
+     label:{
+       content:'我的活动...'
+     }
+   },{
+     id:1,
+     latitude: 30.63179,
+     longitude: 120.56439,
+     iconPath:'../../static/img/test_avatar.jpeg',
+     width: '80rpx',
+     height: '80rpx',
+     label:{
+      content:'我的活动...'
+    }
+   }
+   ]
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
+  async onLoad(){
+    this.poptip = this.selectComponent('.poptip')
+    try{
+      const _location = await wx.getLocation({
+        
       })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
+      this.setData({
+        mapOption:{
+          longitude: _location.longitude,
+          latitude: _location.latitude
         }
       })
+      console.log('info', _location, this.data.mapOption)
+    }catch(e){
+      const setting = await wx.getSetting()
+      setting.authSetting['scope.userLocation'] === false && wx.showModal({
+        content:'请在右上角设置里打开位置信息',
+        showCancel: false,
+        confirmText:'我知道了'
+      })
+      console.error('load err',setting)
     }
+    console.log('ceshiiiii')
   },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
+  async onShow(){
+    this.poptip.error('授权失败！！！')
+  },
+  async locationMe(){
+    const _location = await wx.getLocation({
+        
+    })
     this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
+      mapOption:{
+        longitude: _location.longitude,
+        latitude: _location.latitude
+      }
+    })
+  },
+  more(){
+    const _more = this.selectComponent(".more-activity")
+    _more.popup()
+  },
+  toProfile(){
+    wx.navigateTo({
+      url: '/pages/profile/index',
     })
   }
+
+  
+  
 })

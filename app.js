@@ -1,39 +1,41 @@
 //app.js
+import {login} from './utils/api/user'
 App({
-  onLaunch: function () {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+  onLaunch() {
+    try {
+      //更新版本
+      const _UPM = wx.getUpdateManager()
+      _UPM.onUpdateReady(async _=> {
+        const confirm_res = await wx.showModal({
+          title: '更新提示',
+          content: '新版本已经准备好，是否重启应用？',
+          cancelText:'稍后',
+          confirmText:'立即更新'
+        })
 
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
-    // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              // 可以将 res 发送给后台解码出 unionId
-              this.globalData.userInfo = res.userInfo
-
-              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-              // 所以此处加入 callback 以防止这种情况
-              if (this.userInfoReadyCallback) {
-                this.userInfoReadyCallback(res)
-              }
-            }
-          })
-        }
-      }
-    })
+       confirm_res.confirm && _UPM.applyUpdate()
+      })
+      this.login()
+    } catch (e) {
+      wx.showToast({
+        title: '更新失败！',
+        icon: "none"
+      })
+      console.log('index_error', e)
+    }
   },
-  globalData: {
+  global: {
     userInfo: null
+  },
+
+  async login(){
+    try{
+      const {code} = await wx.login()
+      const _auth = await login({
+        code,
+      })
+    }catch(e){
+      console.log('login error',e)
+    }
   }
 })

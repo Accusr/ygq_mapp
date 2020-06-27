@@ -1,0 +1,5 @@
+<!--components/poptip/index.wxml-->
+<view class="poptip {{msg?'poptip-show':''}}" style="top:{{top}}" catchtap="close">
+	<text>{{msg}}</text>
+	
+</view>
